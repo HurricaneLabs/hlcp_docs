@@ -90,4 +90,24 @@ Check your API key's monthly usage and number of permitted monthly packages
 ############################################################################
 ``| hlcpquota``. No parameters and output is returned directly as a search result.
 
+Fork a package
+###############
+
+With the exception of macros, any change to the contents of a package will be
+overwritten when Hurricane Labs pushes out a new update. Most of the time, this is a
+useful thing as it allows us to improve content transparently and frictionlessly.
+However there may be situations where you want to make significant modifications to
+a search and prevent the app from updating it. In these situations, you can "fork" the
+package using the following macro:
+
+``| `hlcp_fork(package_id)```
+
+Where package_id is the ID of your package (you can pull this from the Content Overview
+dashboard). 
+
+If a later date, you decide you'd rather just pull the stock package contents, you can
+un-fork the package like so:
+
+``| `hlcp_unfork(package_id)```
+
 .. _Splunkbase: https://splunkbase.splunk.com/app/7258
