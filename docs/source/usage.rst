@@ -98,15 +98,15 @@ overwritten when Hurricane Labs pushes out a new update. Most of the time, this 
 useful thing as it allows us to improve content transparently and frictionlessly.
 However there may be situations where you want to make significant modifications to
 a search and prevent the app from updating it. In these situations, you can "fork" the
-package using the following macro:
+package by running the following ad-hoc search:
 
 ``| `hlcp_fork(package_id)```
 
 Where package_id is the ID of your package (you can pull this from the Content Overview
-dashboard). 
+dashboard). This will prevent the package from updating. 
 
 If a later date, you decide you'd rather just pull the stock package contents, you can
-un-fork the package like so:
+un-fork the package with this similar search:
 
 ``| `hlcp_unfork(package_id)```
 
